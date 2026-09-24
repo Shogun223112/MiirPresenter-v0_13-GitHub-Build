@@ -11,6 +11,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
     defaultConfig {
         applicationId = "com.miir.presenter"
         minSdk = 26
@@ -18,12 +22,12 @@ android {
         versionCode = 13
         versionName = "0.13.0"
     }
-    kotlin {
-    jvmToolchain(17)
-    }
     buildFeatures { compose = true }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
+kotlin {
+    jvmToolchain(17)
+    }
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.12.01"))
